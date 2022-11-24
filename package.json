@@ -5,6 +5,7 @@
   "author": "Bhavishya",
   "license": "MIT",
   "scripts": {
+    "preinstall": "cd server && touch .env",
     "prestart": "yarn && cd client && yarn && cd ../server && yarn",
     "start": "concurrently \"yarn start:client\" \"yarn start:server\"",
     "start:client": "cd client && yarn dev",
